@@ -1,0 +1,26 @@
+# Rust
+/target/
+**/*.rs.bk
+Cargo.lock
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv
+venv/
+env/
+
+# Build
+dist/
+wheels/
+*.pyd
+
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

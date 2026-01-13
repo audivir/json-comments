@@ -1,0 +1,23 @@
+[build-system]
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "json-comments"
+version = "0.1.0"
+description = "Rust-backed JSON comment and trailing comma stripper"
+authors = [{ name = "Tim Hörmann", email = "pypi@audivir.de" }]
+readme = "README.md"
+requires-python = ">=3.7,<3.14"
+license = { file = "LICENSE" }
+keywords = ["json", "comments", "trailing-commas", "rust", "performance"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Rust",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Text Processing :: General",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "commentjson", "pyjson5", "msgspec"]
