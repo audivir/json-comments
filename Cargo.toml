@@ -11,3 +11,8 @@ crate-type = ["cdylib"]
 pyo3 = { version = "0.23", features = ["extension-module"] }
 # The fork of json-comments-rs that handles trailing commas
 json-strip-comments = "3.1.0"
+
+[profile.release]
+codegen-units = 1
+debug = false
+lto = "fat"
