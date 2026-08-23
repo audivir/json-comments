@@ -1,3 +1,7 @@
+"""Tests for the `json_comments` module."""
+
+from __future__ import annotations
+
 import json
 
 import json_comments

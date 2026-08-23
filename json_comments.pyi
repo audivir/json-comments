@@ -31,6 +31,5 @@ def strip_json(data: str) -> str:
         data: The raw JSON string which may contain comments or trailing commas.
 
     Returns:
-        A cleaned JSON string ready for json.loads().
-
+        A cleaned JSON string ready for `json.loads()`.
     """

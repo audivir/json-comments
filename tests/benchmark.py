@@ -1,6 +1,5 @@
-"""Benchmark for json_comments against other comment-stripping libraries."""
+"""Benchmarks `json_comments` against other comment-stripping libraries."""
 
-# ruff: noqa: T201
 from __future__ import annotations
 
 import json
@@ -8,9 +7,10 @@ import timeit
 from typing import TYPE_CHECKING, Any
 
 import commentjson
-import json_comments
 import msgspec
 import pyjson5
+
+import json_comments
 
 if TYPE_CHECKING:
     from collections.abc import Callable
@@ -126,4 +126,4 @@ def run_benchmark(
 
 
 if __name__ == "__main__":
-    run_benchmark(n=1000, iterations=100)
+    run_benchmark(n=1000, iterations=1000)
