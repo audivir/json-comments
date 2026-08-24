@@ -2,9 +2,10 @@
 name = "json-comments"
 version = "0.1.1"
 edition = "2024"
+description = "Rust-backed JSON comment and trailing comma stripper"
 
 [lib]
-name = "json_comments"
+name = "_json_comments"
 crate-type = ["cdylib"]
 
 [dependencies]

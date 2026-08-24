@@ -19,17 +19,8 @@ Example:
 
 '''
 
-def strip_json(data: str) -> str:
-    """Strip comments and trailing commas from a JSON string.
+from __future__ import annotations
 
-    Strips C-style (`//`), block (`/* */`), and shell-style (`#`) comments,
-    as well as trailing commas from a JSON string.
-    Does not validate the JSON structure itself. If a block comment is unclosed (`/*`),
-    the remainder of the string is treated as a comment and removed.
+from json_comments._json_comments import strip_json
 
-    Args:
-        data: The raw JSON string which may contain comments or trailing commas.
-
-    Returns:
-        A cleaned JSON string ready for `json.loads()`.
-    """
+__all__ = ["strip_json"]

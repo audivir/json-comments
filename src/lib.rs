@@ -22,26 +22,9 @@ fn strip_json(mut data: String) -> PyResult<String> {
     Ok(data)
 }
 
-/// Rust-backed JSON comment and trailing comma stripper.
-///
-/// Provides a `strip_json` function that removes C-style (`//`), block (`/* */`),
-/// and shell-style (`#`) comments, as well as trailing commas from JSON strings.
-/// The result is a valid JSON string that can be parsed by json.loads() or similar JSON parsers.
-///
-/// Example:
-///     >>> import json
-///     >>> import json_comments
-///     >>> json.loads(json_comments.strip_json("""\
-///         {
-///             "foo": "bar", // c-style comment
-///             "baz": "qux", # shell-style comment
-///             "key": "value", /* block comment */
-///             "number": 123, // trailing comma
-///         }
-///     """))
-///     {'foo': 'bar', 'baz': 'qux', 'key': 'value', 'number': 123}
+/// Compiled extension backing the `json_comments` package.
 #[pymodule]
-fn json_comments(m: &Bound<'_, PyModule>) -> PyResult<()> {
+fn _json_comments(m: &Bound<'_, PyModule>) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(strip_json, m)?)?;
     Ok(())
 }

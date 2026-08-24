@@ -7,10 +7,9 @@ import timeit
 from typing import TYPE_CHECKING, Any
 
 import commentjson
+import json_comments
 import msgspec
 import pyjson5
-
-import json_comments
 
 if TYPE_CHECKING:
     from collections.abc import Callable

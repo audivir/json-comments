@@ -1,29 +1,50 @@
-# Rust
-/target/
-**/*.rs.bk
+# rust-generated files
 Cargo.lock
+**/*.rs.bk
+/target/
 
-# Python
+# python-generated files
 __pycache__/
 *.py[cod]
 *$py.class
+*.pyd
 *.so
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-.venv
-venv/
-env/
-
-# Build
+*.egg-info
+build/
 dist/
 wheels/
-*.pyd
 
-.vscode/
+# build artifacts
+.pdm-build/
+.pdm-python
+
+# virtual environments
+.venv/
+venv/
+
+# test artifacts
+.benchmarks/
+.coverage*
+.pytest_cache/
+
+# lint artifacts
+.mypy_cache/
+.ruff_cache/
+
+# uv
+uv.lock
+.python-version
+
+# editors
 .idea/
+.vscode/
+
+# os
 .DS_Store
 Thumbs.db
 
-uv.lock
-.coverage
+# environment variables
+.env
+env/
+
+# custom exclusions

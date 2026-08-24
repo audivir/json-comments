@@ -1,0 +1,10 @@
+# Changes here will be overwritten by Copier
+_commit: 0b9cfe5
+_src_path: gh:audivir/copier-template
+author_email: pypi@audivir.de
+author_name: Tim Hörmann
+description: Rust-backed JSON comment and trailing comma stripper
+github_org: audivir
+project_name: json-comments
+project_slug: json_comments
+project_type: pyo3
